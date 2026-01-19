@@ -54,7 +54,7 @@ final class ViewController: UIViewController {
     
     private func dateOfChange() -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM HH:MM:SS"
+        formatter.dateFormat = "dd.MM HH:mm:ss"
         return formatter.string(from: Date())
     }
     
