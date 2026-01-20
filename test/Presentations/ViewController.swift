@@ -8,18 +8,18 @@
 import UIKit
 
 final class ViewController: UIViewController {
+    @IBOutlet private weak var resultLabel: UILabel!
+    
+    @IBOutlet private weak var historyOfChangeLabel: UITextView!
+    
+    @IBOutlet private weak var minusButton: UIButton!
+    
+    @IBOutlet private weak var plusButton: UIButton!
+    
+    @IBOutlet private weak var trashButton: UIButton!
+    
     private var count = 0
     private var history: [String] = []
-    
-    @IBOutlet weak var resultLabel: UILabel!
-    
-    @IBOutlet weak var historyOfChangeLabel: UITextView!
-    
-    @IBOutlet weak var minusButton: UIButton!
-    
-    @IBOutlet weak var plusButton: UIButton!
-    
-    @IBOutlet weak var trashButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,37 +28,13 @@ final class ViewController: UIViewController {
         historyOfChangeLabel.text = "История изменений: "
     }
     
-    @IBAction func subtractOne(_ sender: Any) {
-        if count > 0 {
-            count -= 1
-            writeResult()
-            addChangeToHistory(type: -1)
-        } else {
-            addChangeToHistory(type: -2)
-        }
-    }
-    
-    
-    @IBAction func addOne(_ sender: Any) {
-        count += 1
-        writeResult()
-        addChangeToHistory(type: 1)
-    }
-    
-    
-    @IBAction func trashResult(_ sender: Any) {
-        count = 0
-        writeResult()
-        addChangeToHistory(type: 0)
-    }
-    
     private func dateOfChange() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd.MM HH:mm:ss"
         return formatter.string(from: Date())
     }
     
-    func addChangeToHistory(type: Int) {
+    private func addChangeToHistory(type: Int) {
         let positionInHistory = history.count + 1
         let date = dateOfChange()
         
@@ -77,9 +53,33 @@ final class ViewController: UIViewController {
         writeResult()
     }
     
-    func writeResult() {
+    private func writeResult() {
         resultLabel.text = String(count)
         historyOfChangeLabel.text = history.joined(separator: "\n")
+    }
+    
+    @IBAction private func subtractOne(_ sender: Any) {
+        if count > 0 {
+            count -= 1
+            writeResult()
+            addChangeToHistory(type: -1)
+        } else {
+            addChangeToHistory(type: -2)
+        }
+    }
+    
+    
+    @IBAction private func addOne(_ sender: Any) {
+        count += 1
+        writeResult()
+        addChangeToHistory(type: 1)
+    }
+    
+    
+    @IBAction private func trashResult(_ sender: Any) {
+        count = 0
+        writeResult()
+        addChangeToHistory(type: 0)
     }
 }
 
