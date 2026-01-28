@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yr-Lm-l1v">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yr-Lm-l1v">
                                 <rect key="frame" x="219" y="590" width="221" height="190"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="+" subtitle="" buttonSize="large">
                                     <backgroundConfiguration key="background" cornerRadius="0.0">
@@ -32,9 +31,8 @@
                                     <action selector="addOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rKb-Ff-twh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYa-Sf-Nwq">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYa-Sf-Nwq">
                                 <rect key="frame" x="0.0" y="780" width="440" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="">
                                     <imageReference key="image" image="trash" catalog="system" symbolScale="large" variableValue="0.20000000000000001"/>
@@ -50,9 +48,8 @@
                                     <action selector="trashResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NXg-NT-rJN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFc-5W-0hk">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFc-5W-0hk">
                                 <rect key="frame" x="0.0" y="590" width="220" height="190"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="-" buttonSize="large">
                                     <backgroundConfiguration key="background" cornerRadius="0.0">
@@ -65,9 +62,8 @@
                                     <action selector="subtractOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Kr-p4-dLu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hz-Sn-9OQ">
-                                <rect key="frame" x="-11" y="0.0" width="462" height="261"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hz-Sn-9OQ">
+                                <rect key="frame" x="0.0" y="0.0" width="440" height="261"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="75"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,6 +79,24 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oYa-Sf-Nwq" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1841" id="2L5-FQ-PxD"/>
+                            <constraint firstItem="6Hz-Sn-9OQ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.273013" id="2aT-PY-9zp"/>
+                            <constraint firstItem="8Yr-Lm-l1v" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.198745" id="2wD-gn-ppE"/>
+                            <constraint firstItem="aFc-5W-0hk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9gQ-55-8QQ"/>
+                            <constraint firstItem="oYa-Sf-Nwq" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="Inw-qa-yfN"/>
+                            <constraint firstItem="aFc-5W-0hk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="S6R-nx-wRP"/>
+                            <constraint firstItem="oYa-Sf-Nwq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="UJ8-yg-r6k"/>
+                            <constraint firstItem="oYa-Sf-Nwq" firstAttribute="top" secondItem="8Yr-Lm-l1v" secondAttribute="bottom" id="esD-gH-9cI"/>
+                            <constraint firstItem="6Hz-Sn-9OQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lfD-fa-N1V"/>
+                            <constraint firstAttribute="top" secondItem="6Hz-Sn-9OQ" secondAttribute="top" id="ov2-z9-bsW"/>
+                            <constraint firstItem="6Hz-Sn-9OQ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="pZd-tB-wPV"/>
+                            <constraint firstItem="8Yr-Lm-l1v" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.502273" id="pa2-Ae-hEJ"/>
+                            <constraint firstAttribute="trailing" secondItem="8Yr-Lm-l1v" secondAttribute="trailing" id="txa-aL-8zm"/>
+                            <constraint firstItem="aFc-5W-0hk" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.198745" id="uMo-TO-iog"/>
+                            <constraint firstItem="oYa-Sf-Nwq" firstAttribute="top" secondItem="aFc-5W-0hk" secondAttribute="bottom" id="vnx-HS-Hw7"/>
+                            <constraint firstItem="oYa-Sf-Nwq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zP0-wk-ZUL"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="historyOfChangeLabel" destination="Q8B-5D-8pA" id="oba-j6-x8v"/>
@@ -106,13 +120,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.53333333333333333" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
-            <color red="0.38039215686274508" green="0.33333333333333331" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.2196078431372549" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
